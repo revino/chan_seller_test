@@ -12,13 +12,13 @@ public class StoreController {
 
     private final StoreService storeService;
 
-    @PostMapping(value = "/account")
+    @PostMapping(value = "/store")
     public String signin(@RequestBody StoreDto store){
         storeService.signUp(store);
         return store.getName();
     }
 
-    @GetMapping(value = "/account/{id}")
+    @GetMapping(value = "/store/{id}")
     public String signin(@PathVariable("id") String id){
         Store store = storeService.findId(id);
         return store.getName() + "-" + store.getDescription();

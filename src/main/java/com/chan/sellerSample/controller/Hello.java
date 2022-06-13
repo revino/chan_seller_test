@@ -13,7 +13,7 @@ public class Hello {
 
     @GetMapping("/hi")
     public String HELLO(){
-        return "hello customer";
+        return "hello seller";
     }
 
     @GetMapping("/checkHealth")
